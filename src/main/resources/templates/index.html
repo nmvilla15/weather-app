@@ -38,6 +38,25 @@
 			</div>
 		</div>
 	</div>
+	<hr>
+	<table>
+		<thead>
+			<tr>
+				<th>Recently Searched Zip Codes</th>
+			</tr>
+		</thead>
+		<tbody>
+			<th:block th:object="${recentzips}">
+				<tr th:if="${#lists.isEmpty(recentzips)}">
+					<td colspan="2"> No Recent Searches</td>
+				</tr>
+				<tr th:each="zip : ${recentzips}">
+					<td><span th:text="${zip}"> Zip Code</span></td> 
+				</tr>
+			</th:block>
+		</tbody>
+	</table>
+	
 	</div>
 </div>
 </body>

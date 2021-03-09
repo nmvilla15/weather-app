@@ -1,10 +1,14 @@
 package com.tts.weatherapp.model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.hibernate.annotations.CreationTimestamp;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,5 +28,9 @@ public class ZipCode {
 	private Long id;
 	
 	private String zipCode;
-
+	
+	@CreationTimestamp
+	private Date createdAt;
+	
+	
 }
